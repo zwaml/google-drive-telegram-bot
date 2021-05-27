@@ -23,22 +23,22 @@ class BotCommands:
 class Messages:
     START_MSG = "**مرحبا عزيزي {}.**\n__أنا Google Drive Uploader Bot يمكنك استخدامه لتحميل أي ملف / فيديو إلى Google Drive من رابط مباشر أو ملفات Telegram.\nلمعرفة كيف استخدام البوت اضغط  /help."
 
-    HELP_MSG = [
+   HELP_MSG = [
         ".",
-        "**Google Drive Uploader**\n__I can upload files from direct link or Telegram Files to your Google Drive. All i need is to authenticate me to your Google Drive Account and send a direct download link or Telegram File.__\n\nI have more features... ! Wanna know about it ? Just walkthrough this tutorial and read the messages carefully.",
+        "**Google Drive Uploader**\nيمكنني تحميل الملفات من رابط مباشر أو ملفات Telegram إلى Google Drive الخاص بك. كل ما أحتاجه هو ربط البوت  على حساب Google Drive الخاص بك وإرسال رابط تنزيل مباشر أو ملف Telegram.\n\nلدي ايضا المزيد من المميزات ... !هل تريد ان تكتشف ذلك  ? فقط تابع الخطوات التوضيحية التالية بعناية .",
         
-        f"**Authenticating Google Drive**\n__Send the /{BotCommands.Authorize[0]} commmand and you will receive a URL, visit URL and follow the steps and send the received code here. Use /{BotCommands.Revoke[0]} to revoke your currently logged Google Drive Account.__\n\n**Note: I will not listen to any command or message (except /{BotCommands.Authorize[0]} command) until you authorize me.\nSo, Authorization is mandatory !**",
+        f"**ربط البوت بحساب قوقل درايف **\nارسل  الامر  /{BotCommands.Authorize[0]} وسوف تحصل على رابط المصادقة , ادخل على الرابط بالزر بالاسفل واتبع كل الخطوات وقم بنسخ الكود الذي سوف تحصل عليه وارسله الى هنا . استخدم الامر  /{BotCommands.Revoke[0]}  لتسجيل الخروج من قوقل درايف باي وقت تريد ذلك.__\n\n**ملاحظة : انا لا افهم ولا استجيب لاي امر الا فقط   الامر ( /{BotCommands.Authorize[0]} ) حتى تقوم بربط البوت بحساب قوقل درايف  .\nلذلك ربط البوت بحساب قوقل درايف اجباري كي اعمل بشكل صحيح !**",
         
-        f"**Direct Links**\n__Send me a direct download link for a file and i will download it on my server and Upload it to your Google Drive Account. You can rename files before uploading to GDrive Account. Just send me the URL and new filename separated by ' | '.__\n\n**__Examples:__**\n```https://example.com/AFileWithDirectDownloadLink.mkv | New FileName.mkv```\n\n**Telegram Files**\n__To Upload telegram files in your Google drive Account just send me the file and i will download and upload it to your Google Drive Account. Note: Telegram Files Downloading are slow. it may take longer for big files.__\n\n**YouTube-DL Support**\n__Download files via youtube-dl.\nUse /{BotCommands.YtDl[0]} (YouTube Link/YouTube-DL Supported site link)__",
+        f"**تحميل الروابط المباشرة **\n يمكنك ايضا ارسال رابط مباشر لاي ملف وانا ساقوم بتحميله للسيرفر الخاص بالبوت ثم ارفعه الى حسابك بقوقل درايف .تستطيع ايضا اعادة تسمية الملفات قبل رفعها لقوقل درايف  . فقط ارسل لي رابط التحميل المباشر ثم  علامة  ' | ' ثم الاسم الجديد للملف .__\n\n**مثال ذلك :**\n```https://example.com/AFileWithDirectDownloadLink.mkv | اسم-الملف.mkv```\n\n**ملفات تلقرام **\nلرفع  ملفات telegram الى  حساب Google Drive الخاص بك ، ما عليك سوى إرسال الملف إلي وسأقوم بتنزيله وتحميله إلى حساب Google Drive الخاص بك. ملاحظة : تنزيل ملفات Telegram بطيء. قد يستغرق الأمر وقتًا أطول للملفات الكبيرة.__\n\n**البوت ايضا يدعم تحميل فديوهات اليوتيوب**\nلتحميل فديوهات يوتيوب ورفعها الى قوقل درايف .\nاستخدم الامر  مثال ذلك :  /{BotCommands.Ytdl[0]} رابط اليوتيوب ",
         
-        f"**Custom Folder for Upload**\n__Want to upload in custom folder or in__ **TeamDrive** __ ?\nUse /{BotCommands.SetFolder[0]} (Folder URL) to set custom upload folder.\nAll the files are uploaded in the custom folder you provide.__",
+        f"**تعيين مجلد معين **\nهل ترغب ان ترفع الملفات الى مجلد معين ا الى  **TeamDrive**  ?\n استخدم الامر ( /{BotCommands.SetFolder[0]} رابط المجلد ) لتخصيص مجلد معين .\nكل الملفات سوف ارفعها الى المجلد المعين الذي قمت بتخصيصه .",
         
-        f"**Delete Google Drive Files**\n__Delete google drive files. Use /{BotCommands.Delete[0]} (File/Folder URL) to delete file or reply /{BotCommands.Delete[0]} to bot message.\nYou can also empty trash files use /{BotCommands.EmptyTrash[0]}\nNote: Files are deleted permanently. This process cannot be undone.\n\n**Copy Google Drive Files**\n__Yes, Clone or Copy Google Drive Files.\n__Use /{BotCommands.Clone[0]} (File id / Folder id or URL) to copy Google Drive Files in your Google Drive Account.__",
+        f"**حذف ملفات Google Drive **\n لحذف اي ملف او اي مجلد  بقوقل درايف . استخدم الامر ( /{BotCommands.Delete[0]} رابط المجلد / رابط الملف) .\nيمكنك ايضا تفريغ سلة المهملات  باستخدام  الامر  /{BotCommands.EmptyTrash[0]}\nملاحظة : الملفات ستحذف بشكل نهائي . هذه العملية لا يمكن الغاؤها .\n\n**نسخ ملفات  Google Drive **\nنعم استنساخ  ونسخ ,ملفات  Google Drive .\n لعمل ذلك استخدم الامر ( /{BotCommands.Clone[0]} ايدي الملف / ايدي المجلد او رابطه ) لاستنساخ اي ملف او مجلد على حسابك ",
         
-        "**Rules & Precautions**\n__1. Don't copy BIG Google Drive Files/Folders. It may hang the bot and your files maybe damaged.\n2. Send One request at a time unless bot will stop all processes.\n3. Don't send slow links @transload it first.\n4. Don't misuse, overload or abuse this free service.__",
+        "**القواعد  & التحذيرات **\n 1.لا تنسخ ملفات / مجلدات Google Drive الكبيرة. قد يتعطل الروبوت وقد تتلف ملفاتك.\n2. أرسل طلبًا واحدًا في كل مرة  وانتظر حتى يكمل البوت العملية ما لم سيوقف البوت جميع العملياتs.\n3. لا ترسل للبوت روابط بطيئة التحميل .\n4. لا تسيء استخدام هذه الخدمة المجانية أو تفرط في تحميلها أو تسيء استخدامها فيما لا يرضي الله  وفي الاخير شكرا لكم لاستخدامكم البوت الخاص بنا  وتقبلوا خالص تحاياتي  أخوكم المجاهد عدي الغولي.",
         
         # Dont remove this ↓ if you respect developer.
-        "**Developed by @viperadnan**"
+        "**تم تطوير البوت بواسطة  @haidarkrar**"
         ]
      
     RATE_LIMIT_EXCEEDED_MESSAGE = "❗ **Rate Limit Exceeded.**\n__User rate limit exceeded try after 24 hours.__"
