@@ -21,9 +21,9 @@ class BotCommands:
   YtDl = ['ytdl']
 
 class Messages:
-    START_MSG = "**مرحبا عزيزي {}.**\n__أنا Google Drive Uploader Bot يمكنك استخدامه لتحميل أي ملف / فيديو إلى Google Drive من رابط مباشر أو ملفات Telegram.\nلمعرفة كيف استخدام البوت اضغط  /help."
+    START_MSG = "**مرحبا there {}.**\n__I'm Google Drive Uploader Bot.You can use me to upload any file / video to Google Drive from direct link or Telegram Files.__\n__You can know more from /help.__"
 
-   HELP_MSG = [
+    HELP_MSG = [
         ".",
         "**Google Drive Uploader**\n__I can upload files from direct link or Telegram Files to your Google Drive. All i need is to authenticate me to your Google Drive Account and send a direct download link or Telegram File.__\n\nI have more features... ! Wanna know about it ? Just walkthrough this tutorial and read the messages carefully.",
         
@@ -41,57 +41,56 @@ class Messages:
         "**Developed by @haidarkrar**"
         ]
      
-     
-    RATE_LIMIT_EXCEEDED_MESSAGE = "❗ **لقد تجاوزت الحد اليومي المسموح به .**\nحاول مرة اخرى بعد 24 ساعة .__"
+    RATE_LIMIT_EXCEEDED_MESSAGE = "❗ **Rate Limit Exceeded.**\n__User rate limit exceeded try after 24 hours.__"
     
-    FILE_NOT_FOUND_MESSAGE = "❗ **الملف او المجلد المطلوب  **\_File id - {}  . غير موجود . تاكد بانه صحيح ومتاح بنفس الحساب المربوط بالبوت ."
+    FILE_NOT_FOUND_MESSAGE = "❗ **File/Folder not found.**\n__File id - {} Not found. Make sure it\'s exists and accessible by the logged account.__"
     
-    INVALID_GDRIVE_URL = "❗ **رابط قوقل درايف خاطئ **\nتاكد من ان الرابط بالصيغه الصحيحه ."
+    INVALID_GDRIVE_URL = "❗ **Invalid Google Drive URL**\nMake sure the Google Drive URL is in valid format."
     
-    COPIED_SUCCESSFULLY = "✅ **تم  النسخ بنجاح .**\n[{}]({}) __({})__"
+    COPIED_SUCCESSFULLY = "✅ **Copied successfully.**\n[{}]({}) __({})__"
     
-    NOT_AUTH = f"🔑 **المعذرة لم تربطني باي حساب  حتى اقوم برفع الملفات .**\nارسل الامر  /{BotCommands.Authorize[0]} لربط  حساب قوقل درايف ."
+    NOT_AUTH = f"🔑 **You have not authenticated me to upload to any account.**\n__Send /{BotCommands.Authorize[0]} to authenticate.__"
     
-    DOWNLOADED_SUCCESSFULLY = "📤 **جاري رفع الملف ...**\n**اسم الملف :** ```{}```\n**حجم الملف :** ```{}```"
+    DOWNLOADED_SUCCESSFULLY = "📤 **Uploading File...**\n**Filename:** ```{}```\n**Size:** ```{}```"
     
-    UPLOADED_SUCCESSFULLY = "✅ **تم رفع الملف بنجاح .**\n[{}]({}) __({})__"
+    UPLOADED_SUCCESSFULLY = "✅ **Uploaded Successfully.**\n[{}]({}) __({})__"
     
-    DOWNLOAD_ERROR = "❗**فشل التحميل  **\n{}\n__الرابط  - {}__"
+    DOWNLOAD_ERROR = "❗**Downloader Failed**\n{}\n__Link - {}__"
     
-    DOWNLOADING = "📥 **جاري  تحميل الملف ...\nالرابط :** ```{}```"
+    DOWNLOADING = "📥 **Downloading File...\nLink:** ```{}```"
     
-    ALREADY_AUTH = "🔒 **البوت مربوط بالفعل بحساب  Google Drive .**\n استخدم الامر  /revoke لتسجيل الخروج من الحساب الحالي .\nأرسل لي رابطًا مباشرًا أو ملفًا للتحميل على Google Drive"
+    ALREADY_AUTH = "🔒 **Already authorized your Google Drive Account.**\n__Use /revoke to revoke the current account.__\n__Send me a direct link or File to Upload on Google Drive__"
     
-    FLOW_IS_NONE = f"❗ **الكود غير صحيح **\n اضغط  {BotCommands.Authorize[0]} اولا ."
+    FLOW_IS_NONE = f"❗ **Invalid Code**\n__Run {BotCommands.Authorize[0]} first.__"
     
-    AUTH_SUCCESSFULLY = '🔐 **تم ربط حسابك بنجاح .**'
+    AUTH_SUCCESSFULLY = '🔐 **Authorized Google Drive account Successfully.**'
     
-    INVALID_AUTH_CODE = '❗ **الكود غير صحيح **\nالرمز الذي أرسلته غير صالح أو تم استخدامه من قبل. قم بإنشاء واحد جديد من خلال عنوان URL الخاص بالمصادقة '
+    INVALID_AUTH_CODE = '❗ **Invalid Code**\n__The code you have sent is invalid or already used before. Generate new one by the Authorization URL__'
     
-    AUTH_TEXT = "⛓️ **لربط البوت بحساب قوقل درايف الخاص بك   [اضغط هنا ]({}) ثم ارسل الكود الى هنا .**\nقم بالدخول للرابط بالاسفل  > اعطي البوت الصلاحيات  > سوف تحصل على كود  >انسخه  > ارسل الكود الى البوت "
+    AUTH_TEXT = "⛓️ **To Authorize your Google Drive account visit this [URL]({}) and send the generated code here.**\n__Visit the URL > Allow permissions > you will get a code > copy it > Send it here__"
     
-    DOWNLOAD_TG_FILE = "📥 **جاري تحميل الملف...**\n**اسم الملف :** ```{}```\n**حجم الملف :** ```{}```\n**نوع الملف :** ```{}```"
+    DOWNLOAD_TG_FILE = "📥 **Downloading File...**\n**Filename:** ```{}```\n**Size:** ```{}```\n**MimeType:** ```{}```"
     
-    PARENT_SET_SUCCESS = '🆔✅ **تم تعيين المجلد بنجاح .**\n ايدي المجلد الحالي هو  - {}\n استخدم  الامر  ```/{} clear``` لمسحه وتعيين المجلد الافتراضي '
+    PARENT_SET_SUCCESS = '🆔✅ **Custom Folder link set successfully.**\n__Your custom folder id - {}\nUse__ ```/{} clear``` __to clear it.__'
     
-    PARENT_CLEAR_SUCCESS = f'🆔🚮 **تم استعادة الملف الافتراضي بنجاح .**\n يمكنك باي وقت استخدام الامر  ``` ( /{BotCommands.SetFolder[0]} رابط المجلد )``` لتعيين مجلد مجددا .'
+    PARENT_CLEAR_SUCCESS = f'🆔🚮 **Custom Folder ID Cleared Successfuly.**\n__Use__ ```/{BotCommands.SetFolder[0]} (Folder Link)``` __to set it back__.'
     
-    CURRENT_PARENT = "🆔 **اي المجلد الحالي هو  - {}**\nاستخدم  الامر  ```( /{} رابط المجلد )``` لتغييرة "
+    CURRENT_PARENT = "🆔 **Your Current Custom Folder ID - {}**\n__Use__ ```/{} (Folder link)``` __to change it.__"
     
-    REVOKED = f"🔓 **تم تسجيل الخروج من الحساب بنجاح .**\n بامكانك باي وقت استخدام الامر  /{BotCommands.Authorize[0]} لربط حسابك بالبوت مجددا ."
+    REVOKED = f"🔓 **Revoked current logged account successfully.**\n__Use /{BotCommands.Authorize[0]} to authenticate again and use this bot.__"
     
-    NOT_FOLDER_LINK = "❗ **رابط  ملف غير صحيح .**\nالرابط الذي ارسلته عباره عن رابط مجلد ."
+    NOT_FOLDER_LINK = "❗ **Invalid folder link.**\n__The link you send its not belong to a folder.__"
     
-    CLONING = "🗂️ **جاري  الاستنساخ في قوقل درايف ...**\nالرابط    - {}__"
+    CLONING = "🗂️ **Cloning into Google Drive...**\n__G-Drive Link - {}__"
     
-    PROVIDE_GDRIVE_URL = "**❗ أدخل عنوان URL صالحًا لـ Google Drive مع الأمر .**\nاستخدم  - ( /{} رابط قوقل درايف )__"
+    PROVIDE_GDRIVE_URL = "**❗ Provide a valid Google Drive URL along with commmand.**\n__Usage - /{} (GDrive Link)__"
     
-    INSUFFICIENT_PERMISSONS = "❗ **ليس لديك صلاحيات  كافية لهذا الملف.**\nرابط الملف  - {}"
+    INSUFFICIENT_PERMISSONS = "❗ **You have insufficient permissions for this file.**\n__File id - {}__"
     
-    DELETED_SUCCESSFULLY = "🗑️✅ *تم حذف الملف بنجاح .**\nتم الحذف بشكل نهائي  !\nايدي الملف  - {}"
+    DELETED_SUCCESSFULLY = "🗑️✅ **File Deleted Successfully.**\n__File deleted permanently !\nFile id - {}__"
     
-    WENT_WRONG = "⁉️ **خطأ: لقد حدث خطأ **\nالرجاء المحاولة لاحقا ."
+    WENT_WRONG = "⁉️ **ERROR: SOMETHING WENT WRONG**\n__Please try again later.__"
     
-    EMPTY_TRASH = "🗑️🚮**تم تفريغ سلة المهملات بنجاح  !**"
+    EMPTY_TRASH = "🗑️🚮**Trash Emptied Successfully !**"
     
-    PROVIDE_YTDL_LINK = "❗**الرجاء ارسال رابط يوتيوب .**"
+    PROVIDE_YTDL_LINK = "❗**Provide a valid YouTube-DL supported link.**"
